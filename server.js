@@ -688,7 +688,7 @@ async function handleDeleteSolution(req, res, sid, me) {
       'DELETE FROM solutions WHERE id=$1 AND user_id=$2 RETURNING image', [sid, me.id]
     ), 5000, 'solutions-delete');
     if (!r.rows.length) return sendJSON(res, 404, { ok: false, error: 'not found' });
-    unlinkUpload(r.rows[0].image);
+    await unlinkUpload(r.rows[0].image);   // 一定要等文件真的删了再回 200（否则刷新又看到图）
     sendJSON(res, 200, { ok: true });
   } catch (e) {
     sendJSON(res, 500, { ok: false, error: '删除失败：' + e.message });

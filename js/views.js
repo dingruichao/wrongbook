@@ -520,7 +520,8 @@ window.Views = (function () {
           (a.noteUsed ? '<div style="font-size:12px;color:var(--muted);margin-top:6px">本次分析参考的备注：' + esc(a.noteUsed) + '</div>' : '') : '') +
         (a.studentAnswer ? '<div class="sec-t">✍️ 学生原答案</div><div class="ans-box--mine">' + esc(a.studentAnswer) + '</div>' : '') +
         (a.answer ? '<div class="sec-t">✅ 答案</div><div class="ans-box"><div class="t">正确答案</div><div class="v">' + esc(a.answer) + '</div></div>' : '') +
-        (a.steps && a.steps.length ? '<div class="sec-t">📝 解题步骤</div><ol class="steps">' +
+        (a.why ? '<div class="sec-t">💡 为什么这样做</div><div class="why-box">' + esc(a.why) + '</div>' : '') +
+        (a.steps && a.steps.length ? '<div class="sec-t">📝 分步讲解</div><ol class="steps">' +
           a.steps.map(function (s) { return '<li>' + esc(s) + '</li>'; }).join('') + '</ol>' : '') +
         (a.knowledge ? '<div class="sec-t">🎯 知识点</div><div class="k-box">' + esc(a.knowledge) + '</div>' : '') +
         ((a.causeType || a.causeDetail) ? '<div class="sec-t">🔍 错因分析</div>' +

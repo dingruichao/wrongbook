@@ -9,6 +9,8 @@
   --warn-soft:#fef4e2;
   --bad:#ef4444;
   --bad-soft:#fdecec;
+  --insight:#0d9488;
+  --insight-soft:#e6f7f4;
   --text:#1c2033;
   --muted:#7b8296;
   --line:#e9ebf3;
@@ -258,6 +260,7 @@ textarea.input{min-height:70px;resize:vertical}
 .steps li{margin-bottom:6px;font-size:14px;line-height:1.6}
 .k-box{background:var(--primary-soft);border-radius:12px;padding:11px;font-size:14px}
 .tip-box{background:var(--warn-soft);border-radius:12px;padding:11px;font-size:14px}
+.why-box{background:var(--insight-soft);border-left:3px solid var(--insight);border-radius:12px;padding:11px 12px;font-size:14px;line-height:1.7;color:#0c5e54}
 .pill{display:inline-block;font-size:12px;font-weight:700;padding:3px 10px;border-radius:999px;background:var(--bad-soft);color:var(--bad)}
 .ans-box--mine{background:var(--warn-soft);border-radius:12px;padding:11px;font-size:14px}
 .raw-text{
