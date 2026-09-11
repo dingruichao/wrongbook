@@ -386,6 +386,9 @@ uploads/                       错题图片与他人解答图片（PG 里只存�
 tests/                         回归测试（见下）
 ```
 
+`uploads/`、`data/`（迁移前的旧 JSON）、`screenshots/` 都在 `.gitignore` 里 —— 前两个是
+真实用户数据，截图里含真实作业照片，所以**不入库**。`uploads/` 目录由 `./start.sh` 自动创建。
+
 ### tests/ 回归测试
 
 | 脚本 | 覆盖 | 跑法 |
